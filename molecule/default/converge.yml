@@ -1,0 +1,9 @@
+- name: Converge
+  hosts: all
+  gather_facts: false
+  tasks:
+    - ansible.builtin.debug:
+        msg: "Fake ansible.builtin.import_playbook : ../../security-group.yml"
+
+- name: Include a play after another play
+  ansible.builtin.import_playbook: ../../security-group.yml
